@@ -24,10 +24,18 @@ class _MyAppState extends State<MyApp> {
       theme: ThemeData(
         brightness: Brightness.light,
         primarySwatch: Colors.deepPurple,
+        appBarTheme: AppBarTheme(
+          backgroundColor: Colors.deepPurple,
+          foregroundColor: Colors.white,
+        ),
       ),
       darkTheme: ThemeData(
         brightness: Brightness.dark,
         primarySwatch: Colors.deepPurple,
+        appBarTheme: AppBarTheme(
+          backgroundColor: Colors.grey[900],
+          foregroundColor: Colors.white,
+        ),
       ),
       themeMode: isDarkMode ? ThemeMode.dark : ThemeMode.light,
       home: HomePage(onThemeChanged: () {
@@ -115,7 +123,6 @@ class _HomePageState extends State<HomePage> {
         title: const Text('Geo Journal'),
         centerTitle: true,
         elevation: 0,
-        backgroundColor: Colors.deepPurple,
         actions: [
           IconButton(
             icon: Icon(isDarkMode ? Icons.light_mode : Icons.dark_mode),
@@ -132,7 +139,9 @@ class _HomePageState extends State<HomePage> {
           gradient: LinearGradient(
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
-            colors: [Colors.deepPurple[100]!, Colors.blue[100]!],
+            colors: isDarkMode
+              ? [Colors.grey[900]!, Colors.grey[850]!]
+              : [Colors.deepPurple[100]!, Colors.blue[100]!],
           ),
         ),
         child: isLoading
@@ -185,6 +194,14 @@ class _HomePageState extends State<HomePage> {
                               ),
                               title: Text(posts[index].title, maxLines: 1, overflow: TextOverflow.ellipsis),
                               subtitle: Text(subtitle, maxLines: 2, overflow: TextOverflow.ellipsis),
+                              trailing: IconButton(
+                                icon: Icon(Icons.delete, color: Colors.red),
+                                onPressed: () {
+                                  setState(() {
+                                    posts.removeAt(index);
+                                  });
+                                },
+                              ),
                               onTap: () {
                                 Navigator.push(
                                   context,
@@ -318,14 +335,15 @@ class _AddPageState extends State<AddPage> {
         title: const Text('Dodaj wpis'),
         centerTitle: true,
         elevation: 0,
-        backgroundColor: Colors.deepPurple,
       ),
       body: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
-            colors: [Colors.deepPurple[100]!, Colors.blue[50]!],
+            colors: isDarkMode
+              ? [Colors.grey[900]!, Colors.grey[850]!]
+              : [Colors.deepPurple[100]!, Colors.blue[50]!],
           ),
         ),
         child: Padding(
@@ -416,14 +434,15 @@ class DetailsPage extends StatelessWidget {
         title: const Text('Szczegóły wpisu'),
         centerTitle: true,
         elevation: 0,
-        backgroundColor: Colors.deepPurple,
       ),
       body: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
-            colors: [Colors.deepPurple[100]!, Colors.blue[100]!],
+            colors: isDarkMode
+              ? [Colors.grey[900]!, Colors.grey[850]!]
+              : [Colors.deepPurple[100]!, Colors.blue[100]!],
           ),
         ),
         child: Padding(
