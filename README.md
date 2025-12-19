@@ -23,8 +23,8 @@ Stwórz podstawową aplikację w **Flutter (Dart)** z **natywną funkcją** oraz
 - Pokaż komunikację z **API** (pobranie/zapis), zachowanie bez internetu/bez uprawnień.
 
 ## Definition of Done (DoD)
-- [ ] 3–4 widoki, kompletna nawigacja.
-- [ ] Co najmniej 1 **natywna funkcja**.
-- [ ] Co najmniej 1 operacja **API** (GET/POST).
-- [ ] Stany: ładowanie, błąd, pusty.
+- [x] 3–4 widoki, kompletna nawigacja.
+- [x] Co najmniej 1 **natywna funkcja**.
+- [x] Co najmniej 1 operacja **API** (GET/POST).
+- [x] Stany: ładowanie, błąd, pusty.
 - [ ] `README.md`, zrzuty ekranów, min. 3 commity.
