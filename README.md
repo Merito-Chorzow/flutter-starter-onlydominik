@@ -23,8 +23,56 @@ Stwórz podstawową aplikację w **Flutter (Dart)** z **natywną funkcją** oraz
 - Pokaż komunikację z **API** (pobranie/zapis), zachowanie bez internetu/bez uprawnień.
 
 ## Definition of Done (DoD)
-- [ ] 3–4 widoki, kompletna nawigacja.
-- [ ] Co najmniej 1 **natywna funkcja**.
-- [ ] Co najmniej 1 operacja **API** (GET/POST).
-- [ ] Stany: ładowanie, błąd, pusty.
-- [ ] `README.md`, zrzuty ekranów, min. 3 commity.
+- [x] 3–4 widoki, kompletna nawigacja.
+- [x] Co najmniej 1 **natywna funkcja**.
+- [x] Co najmniej 1 operacja **API** (GET/POST).
+- [x] Stany: ładowanie, błąd, pusty.
+- [x] `README.md`, zrzuty ekranów, min. 3 commity.
+
+## Co zostało zrobione
+
+- Prosta aplikacja Flutter z 3 widokami: lista wpisów, szczegóły wpisu, dodawanie wpisu
+- Natywna funkcja: pobieranie lokalizacji GPS
+- Komunikacja z API (dummyjson.com): pobieranie wpisów
+- Przełączanie motywu jasny/ciemny
+- Stany ładowania, błąd, pusty
+- Usuwanie wpisów lokalnych
+- Nawigacja między widokami
+
+## Zrzuty ekranu
+
+Jasny motyw:
+- lista wpisów
+  
+![img.png](img.png)
+
+- szczegóły
+  
+![img_1.png](img_1.png)
+
+- dodawanie wpisu
+  
+![img_3.png](img_3.png)
+
+- wyznaczanie lokalizacji dla wpisu
+  
+![img_2.png](img_2.png)
+
+- dodawanie wpisu z lokalizacją
+  
+![img_4.png](img_4.png)
+
+- dodano nowy wpis na liście oraz komunikat na dole
+  
+![img_5.png](img_5.png)
+
+Ciemny motyw: 
+
+- lista wpisów
+  
+![img_6.png](img_6.png)
+
+- dodawanie wpisu
+  
+![img_7.png](img_7.png)
+
